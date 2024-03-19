@@ -33,8 +33,6 @@
         Testam o processo de ponta a ponta
         Testam que mesmo após novas implementações as funcionalidades pré existentes continuam funcionando adequadamente
 
-
-
 ## Passo 3 - Por onde começar os testes?
 
     1 - Começe pelos testes de Componentes
