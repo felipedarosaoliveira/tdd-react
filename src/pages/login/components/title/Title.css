@@ -1,0 +1,7 @@
+@import '../../../../base.css';
+
+.login-title{
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    color: var(--text-enfasis-color);
+}

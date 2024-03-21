@@ -5,5 +5,12 @@
  --text-enfasis-color:rgb(17, 24, 39);
  --text-primary-color: rgb(79, 70, 229);
  --primary-color: rgb(99, 102, 241);
+ --black: #2c2f33;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
 }
 

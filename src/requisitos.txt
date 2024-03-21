@@ -1,0 +1,34 @@
+O processo de autenticação deve ser realizado através de uma chamada do tipo POST ao endpoint '/api/authenticate' passando no corpo da requisição os dados de autenticação de acordo com o json abaixo.
+{
+	"username":"username do usuário",
+    "password":"senha do usuário"
+} 
+
+Durante o processo de autenticação poderão ocorrer os seguintes cenários:
+
+AUTENTICAÇÃO COM SUCESSO
+
+Caso o processo de autenticação seja executado com sucesso a API irá retornar o código 200 juntamente com a informação do token de acesso gerado. Este token será enviado no corpo da resposta de acordo com o JSON abaixo:
+{
+  token: "token_de_acesso_do_usuário"
+}
+Após a confirmação de autenticação o usuário deverá ser direcionado para a tela principal da aplicação (/home).
+
+AUTENTICAÇÃO REJEITADA POR CREDENCIAIS INVÁLIDAS
+
+Caso o processo de autenticação seja rejeitado devido a credenciais inválidas a API irá retornar o código 401 e a aplicação deverá apresentar uma mensagem indicando que os dados de usuário ou senha estão inválidos ("Login ou senha inválido").
+
+AUNTENTICAÇÃO REJEITADA POR NECESSIDADE DE ATUALIZAÇÃO DE SENHA
+Caso o sistema identifique que o usuário necessida realizar a atualização da sua senha de forma obrigatória a API irá retornar o código 470 juntamente com o id do usuário. ste id será enviado no corpo da resposta de acordo com o JSON abaixo:
+
+{
+	"userId":"id_do_usuário"
+}
+
+AUNTENTICAÇÃO REJEITADA DEVIDO A PROBLEMAS NO SERVIDOR
+
+Caso ocorra algum tipo de problema no servidor a API irá retornar um erro 503. Neste caso a aplicação deve apresentar uma mensagem indicando que não é possível realizar o login no momento.("Estamos com uma instabilidade no nosso servicor. Por favor tente mais tarde.")
+
+VALIDAÇÕES
+
+A aplicação deve validar que as informações de usuário e senha foram informadas e caso uma das informações não seja informada, a aplicação deve apresentar uma mensagem ao usuário ("Login ou senha não informado.").

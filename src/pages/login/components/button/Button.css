@@ -1,0 +1,14 @@
+@import '../../../../base.css';
+
+.login-button{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--primary-color);
+    border:1px solid var(--border-color);
+    outline: none;
+    height: 35px;
+    border-radius: 5px;
+    width: 100%;
+}

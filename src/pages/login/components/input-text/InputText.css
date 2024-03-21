@@ -1,0 +1,19 @@
+@import '../../../../base.css';
+
+.login-input-text{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.login-input-text input{
+    height: 35px;
+    border-radius: 5px;
+    border:1px solid var(--border-color);
+    outline: none;
+    box-sizing: border-box;
+    padding-left: 10px;
+}

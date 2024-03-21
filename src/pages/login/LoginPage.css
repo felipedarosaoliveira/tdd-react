@@ -1,0 +1,54 @@
+@import '../../base.css';
+
+.login-page{
+    display: flex;
+    flex-direction: column;
+    margin:20px auto;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    width: calc(100vw - 40px);
+    height: calc(100vh - 80px);
+}
+
+.login-page .login-error-container{
+    width: 100%;
+    height: 40px;
+}
+
+.login-page .login-title{
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.login-page .login-page__panel{
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+
+.login-page .login-page__actions{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-page .login-page__actions .login-link-button{
+    align-self: flex-end;
+}
+
+.login-page .error-message{
+    font-size: 14px;
+}
+
+.login-page .loader{
+    animation:spin 4s linear infinite;
+}
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
